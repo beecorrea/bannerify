@@ -1,15 +1,15 @@
 <template>
   <section>
-    <LabeledInput tag="title-input" :title="title" v-model:val="titleStore['title']" />
+    <LabeledInput tag="labeled-input" :title="title" v-model:val="borderStore[part]" />
   </section>
 </template>
 
 <script setup lang="ts">
-import { titleStore } from '@stores/heading';
+import { borderStore } from '@stores/banner/border';
 import LabeledInput from '../../atoms/LabeledInput/LabeledInput.vue';
-
 const { title } = defineProps<{
   title: string
+  part: string
 }>()
 
 </script>

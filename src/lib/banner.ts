@@ -1,0 +1,1 @@
+export const compileBanner = (top: string, center: string, bottom: string) => top + center + bottom
