@@ -1,4 +1,4 @@
-import { ref } from "vue";
+import { ref, Ref } from "vue";
 
 export const createFlatMapStore = (
   keys: string[],
@@ -8,3 +8,7 @@ export const createFlatMapStore = (
     keys.map(k => [k, initial])
   )
 )
+
+export const createStringStore = (
+  initial: string = "",
+): Ref<string> => ref(initial)
