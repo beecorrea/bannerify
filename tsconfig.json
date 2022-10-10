@@ -20,7 +20,10 @@
         "./src/lib/*",
       ],
       "@stores/*": [
-        "./src/stores/*",
+        "./src/store/stores/*",
+      ],
+      "@actions/*": [
+        "./src/store/actions/*",
       ],
     }
   },

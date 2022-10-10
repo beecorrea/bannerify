@@ -7,7 +7,8 @@ export default defineConfig({
   resolve: {
     alias: {
       '@lib': path.resolve(__dirname, './src/lib/'),
-      '@stores': path.resolve(__dirname, './src/stores/')
+      '@stores': path.resolve(__dirname, './src/store/stores'),
+      '@actions': path.resolve(__dirname, './src/store/actions')
     },
   },
   plugins: [vue()]
