@@ -1,15 +1,20 @@
-import { compileBanner } from '@lib/banner';
-import { fitBorder, fitTitle, withTitle } from '@lib/border';
+import { compileBanner } from '@lib/banner/banner';
+import { buildBorder, buildTitle, BorderConfig } from '@lib/banner/border';
 import { bannerStore, setBanner } from '@stores/banner/banner';
-import { getBorder } from '@stores/banner/border';
+import { getBorder, PartName } from '@stores/banner/border';
 import { TITLE_PADDING, getTitle } from '@stores/banner/title';
 import { onMounted, watch } from 'vue';
 export const banner = bannerStore()
 
 // Fit the borders to the title
-export const borderTop = () => fitBorder(getTitle(), TITLE_PADDING)(getBorder("TOP"))
-export const borderBottom = () => fitBorder(getTitle(), TITLE_PADDING)(getBorder("BOTTOM"))
-export const center = () => fitTitle(getTitle())(getBorder('LEFT'), getBorder('RIGHT'))(TITLE_PADDING)
+const configFromBorder = (borderDirection: PartName) => ({
+  padding: TITLE_PADDING,
+  repeatable: getBorder(borderDirection),
+})
+
+export const borderTop = () => buildBorder(getTitle(), configFromBorder("TOP"))
+export const borderBottom = () => buildBorder(getTitle(), configFromBorder("BOTTOM"))
+export const center = () => buildTitle(getTitle(), configFromBorder("LEFT"))
 
 export const updateBanner = () => setBanner(
   banner,
@@ -25,3 +30,4 @@ export const bannerObserver = () => {
     updateBanner()
   })
 }
+
