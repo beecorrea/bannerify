@@ -1,6 +1,6 @@
 <template>
   <section>
-    <LabeledInput tag="title-input" :title="title" v-model:val="titleStore" />
+    <LabeledInput class="max-w-lg" tag="title-input" :maxLength="38" :title="title" v-model:val="titleStore" />
   </section>
 </template>
 
