@@ -11,12 +11,11 @@ const flex = {
 const box = {
   sizing: "p-6",
   height: "max-h-fit",
-  bg: "bg-slate-700",
+  bg: "bg-sky-900",
 }
 
 const border = {
   line: "rounded-md",
-  // borderColor: "border-slate-600",
 }
 
 const font = {
