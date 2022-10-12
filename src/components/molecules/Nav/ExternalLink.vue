@@ -1,14 +1,15 @@
 <template>
   <a :href="href" target="_blank">
-    <i :class="icon"></i>
+    <i :class="iconClass"></i>
   </a>
 </template>
 
 <script setup lang="ts">
-const { href, iconClass } = defineProps<{
+const { href, icon, size } = defineProps<{
   href: string
-  iconClass: string
+  icon: string
+  size: string
 }>()
 
-const icon = [iconClass, "text-4xl"].join(" ")
+const iconClass = [icon, size].join(" ")
 </script>

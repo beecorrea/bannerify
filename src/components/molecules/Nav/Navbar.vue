@@ -1,9 +1,9 @@
 <template>
-  <section class="w-1/2 flex flex-row justify-between">
-    <h1 class="inline-block text-4xl justify-self-start">#bannerify</h1>
+  <section class="min-w-fit max-w-lg flex flex-row justify-between">
+    <h1 class="inline-block text-2xl justify-self-start">#bannerify</h1>
     <article class="space-x-8">
-      <ExternalLink :href="github" icon-class="devicon-github-original-wordmark colored" />
-      <ExternalLink :href="twitter" icon-class="devicon-twitter-original" />
+      <ExternalLink :href="github" icon="devicon-github-original colored" size="text-2xl" />
+      <ExternalLink :href="twitter" icon="devicon-twitter-original" size="text-2xl" />
     </article>
   </section>
 </template>
