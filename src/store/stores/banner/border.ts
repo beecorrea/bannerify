@@ -3,9 +3,9 @@ import { createFlatMapStore } from "@lib/store";
 export type PartName = keyof typeof BORDERS
 export enum BORDERS {
   TOP = "top",
-  RIGHT = "right side",
+  RIGHT = "center-right",
   BOTTOM = "bottom",
-  LEFT = "left side",
+  LEFT = "center-left",
 }
 
 export const borders = Object.keys(BORDERS).map((name) => {

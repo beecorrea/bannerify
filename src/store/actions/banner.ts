@@ -7,7 +7,7 @@ import { onMounted, watch } from 'vue';
 export const banner = bannerStore()
 
 // Fit the borders to the title
-const configFromBorder = (borderDirection: PartName) => ({
+const configFromBorder = (borderDirection: PartName): BorderConfig => ({
   padding: TITLE_PADDING,
   repeatable: getBorder(borderDirection),
 })
