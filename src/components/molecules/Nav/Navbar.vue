@@ -1,9 +1,9 @@
 <template>
   <section class="max-w-lg flex flex-row justify-between">
     <article>
-      <h1 class="text-2xl">#bannerify</h1>
+      <h1 class="text-2xl">bannerify</h1>
       <p class="text-sm font-semibold py-2 text-gray-500 break-words">
-        Banners for your functions/class/whatever
+        Banners for your source code.
       </p>
     </article>
     <article class="space-x-8">
