@@ -1,6 +1,5 @@
 services:
   - name: bannerify 
-    plan: free
     type: web
     env: static
     buildCommand: yarn build
